@@ -2,7 +2,7 @@ import logging
 from pyspark.sql import SparkSession
 
 def run_spark_job(spark):
-
+    #TODO set this entry point so that you can start ingesting kafka data
     df = spark \
         .readStream \
         .format("kafka") \
