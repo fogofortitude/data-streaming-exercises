@@ -16,3 +16,15 @@
 <blockquote>
 <p><span style="color: #808080;">conda install &lt;package_name&gt;</span></p>
 </blockquote>
+
+<p>&nbsp;</p>
+<h4 class="anchor-heading"><a href="https://kafka.apache.org/quickstart#quickstart_startserver">How to Start a KAFKA Environment</a></h4>
+<p class="note"><strong>NOTE:</strong> Your local environment must have Java 8+ installed.</p>
+<p>Run the following commands in order to start all services in the correct order:</p>
+<pre class="line-numbers  language-bash"><span style="color: #999999;"><code class="  language-bash"><span class="token comment"># Start the ZooKeeper service</span>
+<span class="token comment"># Note: Soon, ZooKeeper will no longer be required by Apache Kafka.</span>
+$ bin/zookeeper-server-start.sh config/zookeeper.properties</code></span></pre>
+<p>Open another terminal session and run:</p>
+<pre class="line-numbers  language-bash"><span style="color: #999999;"><code class="  language-bash"><span class="token comment"># Start the Kafka broker service</span>
+$ bin/kafka-server-start.sh config/server.properties</code></span></pre>
+<p>Once all services have successfully launched, you will have a basic Kafka environment running and ready to use.</p>
