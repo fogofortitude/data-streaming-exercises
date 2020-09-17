@@ -3,11 +3,13 @@ from pyspark.sql import SparkSession
 
 
 def run_spark_job(spark):
-    #TODO set this entry point so that you can start ingesting kafka data
+    #TODO set this entry point so that you can start ingesting kafka data 
+    # set to use the Kafka Server Port#
+    # set the topic name you are subscribing to; to be something you called in your producer 
     df = spark \
         .readStream \
         .format("kafka") \
-        .option("kafka.bootstrap.servers", "localhost:2181") \
+        .option("kafka.bootstrap.servers", "localhost:9092") \
         .option("subscribe", "uber.event.pickup") \
         .option("startingOffsets", "earliest") \
         .option("maxOffsetsPerTrigger", 10) \
