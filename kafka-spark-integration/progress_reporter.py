@@ -7,7 +7,7 @@ def run_spark_job(spark):
         .readStream \
         .format("kafka") \
         .option("kafka.bootstrap.servers", "localhost:9092") \
-        .option("subscribe", "<your topic name>") \
+        .option("subscribe", "uber.event.pickup") \
         .option("startingOffsets", "earliest") \
         .option("maxOffsetsPerTrigger", 10) \
         .option("maxRatePerPartition", 10) \
