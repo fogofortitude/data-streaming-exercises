@@ -22,7 +22,7 @@ def run_spark_job(spark):
     # play around with processingTime to see how the progress report changes
     query = agg_df \
         .writeStream \
-        .trigger(processingTime="<change this>") \
+        .trigger(processingTime="20") \   #20 seconds
         .outputMode('Complete') \
         .format('console') \
         .option("truncate", "false") \
