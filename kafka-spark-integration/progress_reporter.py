@@ -6,7 +6,7 @@ def run_spark_job(spark):
     df = spark \
         .readStream \
         .format("kafka") \
-        .option("kafka.bootstrap.servers", "localhost:<your port>") \
+        .option("kafka.bootstrap.servers", "localhost:9092") \
         .option("subscribe", "<your topic name>") \
         .option("startingOffsets", "earliest") \
         .option("maxOffsetsPerTrigger", 10) \
