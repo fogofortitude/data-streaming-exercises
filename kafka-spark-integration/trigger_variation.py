@@ -17,12 +17,12 @@ def run_spark_job(spark):
     df.printSchema()
     
     # TODO play around with processingTime and once parameter in trigger to see how the progress report changes
-    agg_df = df.count()
+    agg_df = df.groupBy().count()
     
     # play around with processingTime to see how the progress report changes
     query = agg_df \
         .writeStream \
-        .trigger(processingTime="20") \   #20 seconds
+        .trigger(processingTime="20 seconds") \   #20 seconds
         .outputMode('Complete') \
         .format('console') \
         .option("truncate", "false") \
