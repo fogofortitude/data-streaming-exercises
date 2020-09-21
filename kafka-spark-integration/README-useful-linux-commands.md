@@ -189,6 +189,18 @@
 </div>
 </div>
 </div>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container" title="Hint: double-click to select code">
+<div class="line number1 index0 alt2"><code class="powershell plain"></code></div>
+<div class="line number1 index0 alt2"><code class="powershell plain">spark</code><code class="powershell keyword">-submit</code>&nbsp;<code class="powershell plain">-</code><code class="powershell keyword">-packages</code>&nbsp;<code class="powershell plain">org.apache.spark:spark</code><code class="powershell keyword">-sql</code><code class="powershell keyword">-kafka</code><code class="powershell plain">-0-10_2.11:2.3.4 trigger_variation.py</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
 <h2 id="SparkUsefulLinuxTerminalCommands-HowtoconfirmyourKafkaIngestionisworking">How to confirm your Kafka Ingestion is working</h2>
 <div class="code panel pdl conf-macro output-block" data-hasbody="true" data-macro-name="code">
 <div class="codeContent panelContent pdl">
@@ -213,6 +225,7 @@
 </div>
 </div>
 </div>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 </div>
 </div>
