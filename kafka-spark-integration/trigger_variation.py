@@ -26,7 +26,8 @@ def run_spark_job(spark):
         .outputMode('Complete') \
         .format('console') \
         .option("truncate", "false") \
-        .start()
+        .start() \
+        .awaitTermination()
         
 if __name__ == "__main__":
     logger = logging.getLogger(__name__)
