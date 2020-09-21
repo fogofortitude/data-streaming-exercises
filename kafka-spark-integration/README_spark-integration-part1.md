@@ -112,6 +112,14 @@
 <div class="image-atom--image-atom--1XDdu" tabindex="0" role="button" aria-label="Show Image Fullscreen">
 <div class="image-atom-content--CDPca">
 <div class="image-and-annotations-container--1U01s">&nbsp;</div>
+<div class="image-and-annotations-container--1U01s">
+<h3 id="further-optional-reading-on-performance-tuning">Further Optional Reading on Performance Tuning</h3>
+<ul>
+<li>Further reading on JVM and GC (for those who are not familiar with Java):&nbsp;<a href="https://betsol.com/2017/06/java-memory-management-for-java-virtual-machine-jvm/" target="_blank" rel="noopener">https://betsol.com/2017/06/java-memory-management-for-java-virtual-machine-jvm/</a></li>
+<li>Tuning:&nbsp;<a href="https://spark.apache.org/docs/latest/tuning.html" target="_blank" rel="noopener">https://spark.apache.org/docs/latest/tuning.html</a></li>
+<li>Tuning on Cloudera blog:&nbsp;<a href="https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-1/" target="_blank" rel="noopener">https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-1/</a></li>
+</ul>
+</div>
 <div class="image-and-annotations-container--1U01s">&nbsp;</div>
 </div>
 </div>
