@@ -1,0 +1,250 @@
+
+root@81c68c0b4a46:/home/workspace# spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 progress_reporter.py
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+:: loading settings :: url = jar:file:/opt/spark-2.3.4-bin-hadoop2.7/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+org.apache.spark#spark-sql-kafka-0-10_2.11 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-ee2f2ad6-dd20-48b7-a370-c1864b20799e;1.0
+        confs: [default]
+        found org.apache.spark#spark-sql-kafka-0-10_2.11;2.3.4 in central
+        found org.apache.kafka#kafka-clients;0.10.0.1 in central
+        found net.jpountz.lz4#lz4;1.3.0 in central
+        found org.xerial.snappy#snappy-java;1.1.2.6 in central
+        found org.slf4j#slf4j-api;1.7.16 in central
+        found org.spark-project.spark#unused;1.0.0 in central
+:: resolution report :: resolve 711ms :: artifacts dl 25ms
+        :: modules in use:
+        net.jpountz.lz4#lz4;1.3.0 from central in [default]
+        org.apache.kafka#kafka-clients;0.10.0.1 from central in [default]
+        org.apache.spark#spark-sql-kafka-0-10_2.11;2.3.4 from central in [default]
+        org.slf4j#slf4j-api;1.7.16 from central in [default]
+        org.spark-project.spark#unused;1.0.0 from central in [default]
+        org.xerial.snappy#snappy-java;1.1.2.6 from central in [default]
+        ---------------------------------------------------------------------
+        |                  |            modules            ||   artifacts   |
+        |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+        ---------------------------------------------------------------------
+        |      default     |   6   |   0   |   0   |   0   ||   6   |   0   |
+        ---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-ee2f2ad6-dd20-48b7-a370-c1864b20799e
+        confs: [default]
+        0 artifacts copied, 6 already retrieved (0kB/10ms)
+2020-09-21 02:57:01 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2020-09-21 02:57:02 INFO  SparkContext:54 - Running Spark version 2.3.4
+2020-09-21 02:57:02 INFO  SparkContext:54 - Submitted application: StructuredStreamingSetup
+2020-09-21 02:57:02 INFO  SecurityManager:54 - Changing view acls to: root
+2020-09-21 02:57:02 INFO  SecurityManager:54 - Changing modify acls to: root
+2020-09-21 02:57:02 INFO  SecurityManager:54 - Changing view acls groups to: 
+2020-09-21 02:57:02 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2020-09-21 02:57:02 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2020-09-21 02:57:03 INFO  Utils:54 - Successfully started service 'sparkDriver' on port 44697.
+2020-09-21 02:57:03 INFO  SparkEnv:54 - Registering MapOutputTracker
+2020-09-21 02:57:03 INFO  SparkEnv:54 - Registering BlockManagerMaster
+2020-09-21 02:57:03 INFO  BlockManagerMasterEndpoint:54 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2020-09-21 02:57:03 INFO  BlockManagerMasterEndpoint:54 - BlockManagerMasterEndpoint up
+2020-09-21 02:57:03 INFO  DiskBlockManager:54 - Created local directory at /tmp/blockmgr-42ed0b5d-1f9f-4eaf-8f04-e20e342d655f
+2020-09-21 02:57:03 INFO  MemoryStore:54 - MemoryStore started with capacity 366.3 MB
+2020-09-21 02:57:03 INFO  SparkEnv:54 - Registering OutputCommitCoordinator
+2020-09-21 02:57:03 INFO  log:192 - Logging initialized @4157ms
+2020-09-21 02:57:03 INFO  Server:351 - jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2020-09-21 02:57:03 INFO  Server:419 - Started @4288ms
+2020-09-21 02:57:03 WARN  Utils:66 - Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+2020-09-21 02:57:03 INFO  AbstractConnector:278 - Started ServerConnector@644077d9{HTTP/1.1,[http/1.1]}{0.0.0.0:4041}
+2020-09-21 02:57:03 INFO  Utils:54 - Successfully started service 'SparkUI' on port 4041.
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6dd103d0{/jobs,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@dded089{/jobs/json,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6679144d{/jobs/job,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@877a303{/jobs/job/json,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7356701c{/stages,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5da3c947{/stages/json,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@77eb7b84{/stages/stage,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@410de7e9{/stages/stage/json,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6d968317{/stages/pool,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@22e618dd{/stages/pool/json,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1f0464ad{/storage,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3118fa0b{/storage/json,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@68cf4904{/storage/rdd,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7a7d9430{/storage/rdd/json,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4660a6de{/environment,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@305ed4bb{/environment/json,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@22cb3cdd{/executors,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3401f0a0{/executors/json,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7794f6a8{/executors/threadDump,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@31a91fed{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4affe0d1{/static,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@b28eaf6{/,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@f4ef1dc{/api,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1cada7ec{/jobs/job/kill,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@a7599aa{/stages/stage/kill,null,AVAILABLE,@Spark}
+2020-09-21 02:57:03 INFO  SparkUI:54 - Bound SparkUI to 0.0.0.0, and started at http://81c68c0b4a46:4041
+2020-09-21 02:57:03 INFO  SparkContext:54 - Added JAR file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.3.4.jar at spark://81c68c0b4a46:44697/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.3.4.jar with timestamp 1600657023934
+2020-09-21 02:57:03 INFO  SparkContext:54 - Added JAR file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-0.10.0.1.jar at spark://81c68c0b4a46:44697/jars/org.apache.kafka_kafka-clients-0.10.0.1.jar with timestamp 1600657023938
+2020-09-21 02:57:03 INFO  SparkContext:54 - Added JAR file:///root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://81c68c0b4a46:44697/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1600657023939
+2020-09-21 02:57:03 INFO  SparkContext:54 - Added JAR file:///root/.ivy2/jars/net.jpountz.lz4_lz4-1.3.0.jar at spark://81c68c0b4a46:44697/jars/net.jpountz.lz4_lz4-1.3.0.jar with timestamp 1600657023940
+2020-09-21 02:57:03 INFO  SparkContext:54 - Added JAR file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar at spark://81c68c0b4a46:44697/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar with timestamp 1600657023943
+2020-09-21 02:57:03 INFO  SparkContext:54 - Added JAR file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at spark://81c68c0b4a46:44697/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1600657023944
+2020-09-21 02:57:04 INFO  SparkContext:54 - Added file file:/home/workspace/progress_reporter.py at file:/home/workspace/progress_reporter.py with timestamp 1600657024025
+2020-09-21 02:57:04 INFO  Utils:54 - Copying /home/workspace/progress_reporter.py to /tmp/spark-aa672399-664a-41bd-9078-3219c7df31aa/userFiles-7548a1d8-d643-4181-9f65-878432ad15ac/progress_reporter.py
+2020-09-21 02:57:04 INFO  SparkContext:54 - Added file file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.3.4.jar at file:///root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.3.4.jar with timestamp 1600657024049
+2020-09-21 02:57:04 INFO  Utils:54 - Copying /root/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.11-2.3.4.jar to /tmp/spark-aa672399-664a-41bd-9078-3219c7df31aa/userFiles-7548a1d8-d643-4181-9f65-878432ad15ac/org.apache.spark_spark-sql-kafka-0-10_2.11-2.3.4.jar
+2020-09-21 02:57:04 INFO  SparkContext:54 - Added file file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-0.10.0.1.jar at file:///root/.ivy2/jars/org.apache.kafka_kafka-clients-0.10.0.1.jar with timestamp 1600657024061
+2020-09-21 02:57:04 INFO  Utils:54 - Copying /root/.ivy2/jars/org.apache.kafka_kafka-clients-0.10.0.1.jar to /tmp/spark-aa672399-664a-41bd-9078-3219c7df31aa/userFiles-7548a1d8-d643-4181-9f65-878432ad15ac/org.apache.kafka_kafka-clients-0.10.0.1.jar
+2020-09-21 02:57:04 INFO  SparkContext:54 - Added file file:///root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at file:///root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1600657024073
+2020-09-21 02:57:04 INFO  Utils:54 - Copying /root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-aa672399-664a-41bd-9078-3219c7df31aa/userFiles-7548a1d8-d643-4181-9f65-878432ad15ac/org.spark-project.spark_unused-1.0.0.jar
+2020-09-21 02:57:04 INFO  SparkContext:54 - Added file file:///root/.ivy2/jars/net.jpountz.lz4_lz4-1.3.0.jar at file:///root/.ivy2/jars/net.jpountz.lz4_lz4-1.3.0.jar with timestamp 1600657024088
+2020-09-21 02:57:04 INFO  Utils:54 - Copying /root/.ivy2/jars/net.jpountz.lz4_lz4-1.3.0.jar to /tmp/spark-aa672399-664a-41bd-9078-3219c7df31aa/userFiles-7548a1d8-d643-4181-9f65-878432ad15ac/net.jpountz.lz4_lz4-1.3.0.jar
+2020-09-21 02:57:04 INFO  SparkContext:54 - Added file file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar at file:///root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar with timestamp 1600657024104
+2020-09-21 02:57:04 INFO  Utils:54 - Copying /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar to /tmp/spark-aa672399-664a-41bd-9078-3219c7df31aa/userFiles-7548a1d8-d643-4181-9f65-878432ad15ac/org.xerial.snappy_snappy-java-1.1.2.6.jar
+2020-09-21 02:57:04 INFO  SparkContext:54 - Added file file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at file:///root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1600657024121
+2020-09-21 02:57:04 INFO  Utils:54 - Copying /root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar to /tmp/spark-aa672399-664a-41bd-9078-3219c7df31aa/userFiles-7548a1d8-d643-4181-9f65-878432ad15ac/org.slf4j_slf4j-api-1.7.16.jar
+2020-09-21 02:57:04 INFO  Executor:54 - Starting executor ID driver on host localhost
+2020-09-21 02:57:04 INFO  Utils:54 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45939.
+2020-09-21 02:57:04 INFO  NettyBlockTransferService:54 - Server created on 81c68c0b4a46:45939
+2020-09-21 02:57:04 INFO  BlockManager:54 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2020-09-21 02:57:04 INFO  BlockManagerMaster:54 - Registering BlockManager BlockManagerId(driver, 81c68c0b4a46, 45939, None)
+2020-09-21 02:57:04 INFO  BlockManagerMasterEndpoint:54 - Registering block manager 81c68c0b4a46:45939 with 366.3 MB RAM, BlockManagerId(driver, 81c68c0b4a46, 45939, None)
+2020-09-21 02:57:04 INFO  BlockManagerMaster:54 - Registered BlockManager BlockManagerId(driver, 81c68c0b4a46, 45939, None)
+2020-09-21 02:57:04 INFO  BlockManager:54 - Initialized BlockManager: BlockManagerId(driver, 81c68c0b4a46, 45939, None)
+2020-09-21 02:57:04 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7bfa223d{/metrics/json,null,AVAILABLE,@Spark}
+2020-09-21 02:57:04 INFO  SharedState:54 - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/workspace/spark-warehouse/').
+2020-09-21 02:57:04 INFO  SharedState:54 - Warehouse path is 'file:/home/workspace/spark-warehouse/'.
+2020-09-21 02:57:04 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@b14bd24{/SQL,null,AVAILABLE,@Spark}
+2020-09-21 02:57:04 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@15298035{/SQL/json,null,AVAILABLE,@Spark}
+2020-09-21 02:57:04 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5150f2a5{/SQL/execution,null,AVAILABLE,@Spark}
+2020-09-21 02:57:04 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1a4a6da{/SQL/execution/json,null,AVAILABLE,@Spark}
+2020-09-21 02:57:04 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@20d7e5e8{/static/sql,null,AVAILABLE,@Spark}
+2020-09-21 02:57:05 INFO  StateStoreCoordinatorRef:54 - Registered StateStoreCoordinator endpoint
+2020-09-21 02:57:05 INFO  ConsumerConfig:178 - ConsumerConfig values: 
+        metric.reporters = []
+        metadata.max.age.ms = 300000
+        partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+        reconnect.backoff.ms = 50
+        sasl.kerberos.ticket.renew.window.factor = 0.8
+        max.partition.fetch.bytes = 1048576
+        bootstrap.servers = [localhost:9092]
+        ssl.keystore.type = JKS
+        enable.auto.commit = false
+        sasl.mechanism = GSSAPI
+        interceptor.classes = null
+        exclude.internal.topics = true
+        ssl.truststore.password = null
+        client.id = 
+        ssl.endpoint.identification.algorithm = null
+        max.poll.records = 1
+        check.crcs = true
+        request.timeout.ms = 40000
+        heartbeat.interval.ms = 3000
+        auto.commit.interval.ms = 5000
+        receive.buffer.bytes = 65536
+        ssl.truststore.type = JKS
+        ssl.truststore.location = null
+        ssl.keystore.password = null
+        fetch.min.bytes = 1
+        send.buffer.bytes = 131072
+        value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+        group.id = spark-kafka-source-c06eeda6-e9d6-4bdd-afdb-26cf42414399--319791886-driver-0
+        retry.backoff.ms = 100
+        sasl.kerberos.kinit.cmd = /usr/bin/kinit
+        sasl.kerberos.service.name = null
+        sasl.kerberos.ticket.renew.jitter = 0.05
+        ssl.trustmanager.algorithm = PKIX
+        ssl.key.password = null
+        fetch.max.wait.ms = 500
+        sasl.kerberos.min.time.before.relogin = 60000
+        connections.max.idle.ms = 540000
+        session.timeout.ms = 30000
+        metrics.num.samples = 2
+        key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+        ssl.protocol = TLS
+        ssl.provider = null
+        ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+        ssl.keystore.location = null
+        ssl.cipher.suites = null
+        security.protocol = PLAINTEXT
+        ssl.keymanager.algorithm = SunX509
+        metrics.sample.window.ms = 30000
+        auto.offset.reset = earliest
+
+2020-09-21 02:57:05 INFO  ConsumerConfig:178 - ConsumerConfig values: 
+        metric.reporters = []
+        metadata.max.age.ms = 300000
+        partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+        reconnect.backoff.ms = 50
+        sasl.kerberos.ticket.renew.window.factor = 0.8
+        max.partition.fetch.bytes = 1048576
+        bootstrap.servers = [localhost:9092]
+        ssl.keystore.type = JKS
+        enable.auto.commit = false
+        sasl.mechanism = GSSAPI
+        interceptor.classes = null
+        exclude.internal.topics = true
+        ssl.truststore.password = null
+        client.id = consumer-1
+        ssl.endpoint.identification.algorithm = null
+        max.poll.records = 1
+        check.crcs = true
+        request.timeout.ms = 40000
+        heartbeat.interval.ms = 3000
+        auto.commit.interval.ms = 5000
+        receive.buffer.bytes = 65536
+        ssl.truststore.type = JKS
+        ssl.truststore.location = null
+        ssl.keystore.password = null
+        fetch.min.bytes = 1
+        send.buffer.bytes = 131072
+        value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+        group.id = spark-kafka-source-c06eeda6-e9d6-4bdd-afdb-26cf42414399--319791886-driver-0
+        retry.backoff.ms = 100
+        sasl.kerberos.kinit.cmd = /usr/bin/kinit
+        sasl.kerberos.service.name = null
+        sasl.kerberos.ticket.renew.jitter = 0.05
+        ssl.trustmanager.algorithm = PKIX
+        ssl.key.password = null
+        fetch.max.wait.ms = 500
+        sasl.kerberos.min.time.before.relogin = 60000
+        connections.max.idle.ms = 540000
+        session.timeout.ms = 30000
+        metrics.num.samples = 2
+        key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+        ssl.protocol = TLS
+        ssl.provider = null
+        ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+        ssl.keystore.location = null
+        ssl.cipher.suites = null
+        security.protocol = PLAINTEXT
+        ssl.keymanager.algorithm = SunX509
+        metrics.sample.window.ms = 30000
+        auto.offset.reset = earliest
+
+2020-09-21 02:57:05 INFO  AppInfoParser:83 - Kafka version : 0.10.0.1
+2020-09-21 02:57:05 INFO  AppInfoParser:84 - Kafka commitId : a7a17cdec9eaa6c5
+root
+ |-- key: binary (nullable = true)
+ |-- value: binary (nullable = true)
+ |-- topic: string (nullable = true)
+ |-- partition: integer (nullable = true)
+ |-- offset: long (nullable = true)
+ |-- timestamp: timestamp (nullable = true)
+ |-- timestampType: integer (nullable = true)
+
+Traceback (most recent call last):
+  File "/home/workspace/progress_reporter.py", line 43, in <module>
+    run_spark_job(spark)
+  File "/home/workspace/progress_reporter.py", line 20, in run_spark_job
+    agg_df = df.df.groupBy().count()
+  File "/opt/spark-2.3.4-bin-hadoop2.7/python/lib/pyspark.zip/pyspark/sql/dataframe.py", line 1182, in __getattr__
+AttributeError: 'DataFrame' object has no attribute 'df'
+2020-09-21 02:57:07 INFO  SparkContext:54 - Invoking stop() from shutdown hook
+2020-09-21 02:57:07 INFO  AbstractConnector:318 - Stopped Spark@644077d9{HTTP/1.1,[http/1.1]}{0.0.0.0:4041}
+2020-09-21 02:57:07 INFO  SparkUI:54 - Stopped Spark web UI at http://81c68c0b4a46:4041
+2020-09-21 02:57:07 INFO  MapOutputTrackerMasterEndpoint:54 - MapOutputTrackerMasterEndpoint stopped!
+2020-09-21 02:57:07 INFO  MemoryStore:54 - MemoryStore cleared
+2020-09-21 02:57:07 INFO  BlockManager:54 - BlockManager stopped
+2020-09-21 02:57:07 INFO  BlockManagerMaster:54 - BlockManagerMaster stopped
+2020-09-21 02:57:07 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:54 - OutputCommitCoordinator stopped!
+2020-09-21 02:57:07 INFO  SparkContext:54 - Successfully stopped SparkContext
+2020-09-21 02:57:07 INFO  ShutdownHookManager:54 - Shutdown hook called
+2020-09-21 02:57:07 INFO  ShutdownHookManager:54 - Deleting directory /tmp/temporaryReader-551d2d8e-b69f-4528-9176-6c4ea5ce8599
+2020-09-21 02:57:07 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-aa672399-664a-41bd-9078-3219c7df31aa/pyspark-1845d94f-3a3f-4267-982d-5af04bdab3a2
+2020-09-21 02:57:07 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-aa672399-664a-41bd-9078-3219c7df31aa
+2020-09-21 02:57:07 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-aac37441-c362-44e9-a12c-b5f12aab2d49
