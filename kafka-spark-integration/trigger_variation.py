@@ -39,6 +39,6 @@ if __name__ == "__main__":
 
     logger.info("Spark started")
 
-    run_spark_job(spark --packages org.apache.spark:spark-sql-kafka-0-10_2.12:2.3.4)
+    run_spark_job(spark)
 
     spark.stop()
