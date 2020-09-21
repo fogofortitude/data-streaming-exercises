@@ -16,8 +16,8 @@ def run_spark_job(spark):
 
     # Show schema for the incoming resources for checks
     df.printSchema()
-    
-    agg_df = df.count()
+   
+    agg_df = df.groupBy().count()
     
     # TODO complete this
     # play around with processingTime to see how the progress report changes
