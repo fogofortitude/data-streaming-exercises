@@ -29,6 +29,12 @@
 <ul>
 <li>Out-of-memory issues can be frequently solved by increasing the memory of executor and driver.</li>
 <li>Always try to give some overhead (usually 10%) to fit your excessive applications.</li>
+<li>Application properties you can use for memory management include:
+<ul>
+<li>spark.executor.memory</li>
+<li>spark.driver.memory</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
