@@ -61,10 +61,10 @@
 <p>Carefully studying your data, to minimize the skewed data problem, we can try the following:</p>
 <ul>
 <li>
-<p><strong>Broadcasting</strong>: You can increase the autoBroadcastJoinThreshold value in spark.sql property so that the smaller tables get &ldquo;broadcasted.&rdquo; This is helpful when you have a large dataset that will not fit into your memory.</p>
+<p><span style="color: #333399;"><strong>Broadcasting</strong>: You can increase the autoBroadcastJoinThreshold value in spark.sql property so that the smaller tables get &ldquo;broadcasted.&rdquo; This is helpful when you have a large dataset that will not fit into your memory.</span></p>
 </li>
 <li>
-<p><strong>Salting</strong>: If you have a key with high cardinality, your dataset will be skewed. Now you introduce a &ldquo;salt,&rdquo; modifying original keys in a certain way and using hash partitioning for proper redistribution of records.</p>
+<p><span style="color: #333399;"><strong>Salting</strong>: If you have a key with high cardinality, your dataset will be skewed. Now you introduce a &ldquo;salt,&rdquo; modifying original keys in a certain way and using hash partitioning for proper redistribution of records.</span></p>
 </li>
 </ul>
 <p>Now that we have cleaned up our data and the skew problem as much as we could, and also assuming that our code is optimized, let&rsquo;s talk about how we can stabilize the system through a couple of different methods:</p>
@@ -72,8 +72,17 @@
 <li>Auto scaling</li>
 <li>Speculative execution</li>
 </ul>
-<p>Auto scaling is only doable with cloud clusters as you can always add more nodes freely. Two popular tech stacks that are used are AWS Auto Scaling (if AWS EMR clusters are used) or auto scaling with Kubernetes (a container-orchestration system).</p>
-<p>Speculative execution is another popular addition to stabilize and reduce bottleneck-like threshold. Speculative execution in Spark detects the &ldquo;speculated task&rdquo; (which means this task is running slower than the median speed of the other tasks), and then submits the &ldquo;speculated task&rdquo; to another worker. This enables continuous parallel execution rather than shutting off the slow task.</p>
+<p><span style="color: #333399;"><strong>Auto scaling</strong> </span></p>
+<ul>
+<li><span style="color: #333399;">is only doable with cloud clusters as you can always add more nodes freely.</span></li>
+<li><span style="color: #333399;">Two popular tech stacks that are used are AWS Auto Scaling (if AWS EMR clusters are used) or auto scaling with Kubernetes (a container-orchestration system).</span></li>
+</ul>
+<p><span style="color: #333399;"><strong>Speculative execution&nbsp;</strong></span></p>
+<ul>
+<li><span style="color: #333399;">is another popular addition to stabilize and reduce bottleneck-like threshold. </span></li>
+<li><span style="color: #333399;">Speculative execution in Spark detects the &ldquo;speculated task&rdquo; (which means this task is running slower than the median speed of the other tasks), and then submits the &ldquo;speculated task&rdquo; to another worker. </span></li>
+<li><span style="color: #333399;">This enables continuous parallel execution rather than shutting off the slow task.</span></li>
+</ul>
 </div>
 </div>
 </div>
@@ -85,8 +94,13 @@
 <div class="ltr">
 <div class="index-module--markdown--2MdcR ureact-markdown ">
 <h2 id="notes-on-scenario-2-diagram-below">Notes on Scenario 2 diagram below</h2>
-<p>In this sample image below, let&rsquo;s say task 1 and 2 are identical to each other. In fact, task 2 is a duplicate of task 1. In the node that contains task 1, if the task is seen to be slower than the median speed, then the job scheduler launches the task 2 (duplicate of task 1) in another node.</p>
-<p>If the duplicate task is faster, the result of task 2 will be submitted to the job scheduler. If the original task is faster, then the result of task 1 will be used. In Spark UI, whichever node that was killed due to late execution will be noted as&nbsp;<code>killed intentionally</code>.</p>
+<p>In this sample image below, let&rsquo;s say task 1 and 2 are identical to each other.</p>
+<ul>
+<li>In fact, task 2 is a duplicate of task 1.</li>
+<li>In the node that contains task 1, if the task is seen to be slower than the median speed, then the job scheduler launches the task 2 (duplicate of task 1) in another node.</li>
+<li>If the duplicate task is faster, the result of task 2 will be submitted to the job scheduler. If the original task is faster, then the result of task 1 will be used.</li>
+<li>In Spark UI, whichever node that was killed due to late execution will be noted as&nbsp;<code>killed intentionally</code>.</li>
+</ul>
 </div>
 </div>
 </div>
