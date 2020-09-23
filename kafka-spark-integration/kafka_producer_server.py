@@ -2,6 +2,8 @@ from kafka import KafkaProducer
 import json
 import time
 
+# Producers produce messages to a topic of their choice. 
+# It is possible to attach a key to each message, in which case the producer guarantees that all messages with the same key will arrive to the same partition.
 
 class ProducerServer(KafkaProducer):
 
